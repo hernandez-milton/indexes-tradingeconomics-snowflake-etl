@@ -17,3 +17,5 @@
 
 !AIRFLOW_DEPLOY/tradingeconomics/
 !AIRFLOW_DEPLOY/tradingeconomics/tradingeconomics.ipynb
+
+!AIRFLOW_DEPLOY/requirements.txt

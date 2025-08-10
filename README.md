@@ -1,6 +1,6 @@
 # Proyecto ETL de Índices Bursátiles - Trading Economics & Snowflake
 
-Este proyecto automatiza la extracción, procesamiento y carga de datos de índices bursátiles globales desde [Trading Economics](https://tradingeconomics.com/stocks) hacia una base de datos Snowflake, utilizando Apache Airflow como orquestador.
+Este proyecto automatiza la extracción, procesamiento y carga de datos de índices bursátiles globales desde [Trading Economics](https://tradingeconomics.com/stocks) hacia una base de datos Snowflake, utilizando Apache Airflow como orquestador y Docker para facilitar la ejecución y despliegue.
 
 ## Descripción
 
@@ -9,6 +9,7 @@ El pipeline realiza las siguientes tareas:
 - **Procesamiento:** Limpia y transforma los datos usando Pandas, asegurando la compatibilidad de los nombres de columnas con Snowflake.
 - **Carga:** Guarda los datos en archivos CSV y los inserta en Snowflake mediante comandos SQL.
 - **Orquestación:** Airflow gestiona la secuencia de tareas ETL, permitiendo la automatización y monitoreo del proceso.
+- **Despliegue:** Docker permite ejecutar todo el entorno de Airflow y dependencias de forma sencilla y reproducible.
 
 ## Herramientas Utilizadas
 
@@ -18,6 +19,7 @@ El pipeline realiza las siguientes tareas:
 - **Apache Airflow**: Orquestación de tareas ETL.
 - **Snowflake**: Almacenamiento y consulta de datos.
 - **SQL**: Scripts para carga y transformación en Snowflake.
+- **Docker**: Contenerización y despliegue
 
 ## Estructura del Proyecto
 
@@ -44,7 +46,7 @@ AIRFLOW_DEPLOY/
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu_usuario/tu_repositorio.git
+    git clone https://github.com/tu_usuario/tradingeconomics-snowflake-etl.git
     ```
 2. Instala las dependencias:
     ```bash
@@ -52,10 +54,14 @@ AIRFLOW_DEPLOY/
     ```
 3. Configura Airflow y Snowflake según tu entorno.
 
-## Ejecución
+## Ejecución con Docker
 
-1. Inicia Airflow y asegúrate de tener configuradas las variables y conexiones necesarias.
-2. Ejecuta el DAG `TRADING_ECONOMICS` para iniciar el pipeline ETL.
+1. Asegúrate de tener [Docker](https://www.docker.com/) instalado.
+2. Construye la imagen y levanta los servicios:
+    ```bash
+    docker-compose up --build
+    ```
+3. Accede a la interfaz de Airflow en [http://localhost:8080](http://localhost:8080) y ejecuta el DAG `TRADING_ECONOMICS`.
 
 ## Personalización
 
