@@ -1,4 +1,4 @@
-# Proyecto ETL de Índices Bursátiles - Trading Economics & Snowflake
+# Proyecto ETL de Índices Bursátiles - Apache Airflow & Snowflake
 
 Este proyecto automatiza la extracción, procesamiento y carga de datos de índices bursátiles globales desde [Trading Economics](https://tradingeconomics.com/stocks) hacia una base de datos Snowflake, utilizando Apache Airflow como orquestador y Docker para facilitar la ejecución y despliegue.
 
@@ -19,7 +19,7 @@ El pipeline realiza las siguientes tareas:
 - **Apache Airflow**: Orquestación de tareas ETL.
 - **Snowflake**: Almacenamiento y consulta de datos.
 - **SQL**: Scripts para carga y transformación en Snowflake.
-- **Docker**: Contenerización y despliegue
+- **Docker**: Contenerización y despliegue del entorno de Airflow y dependencias.
 
 ## Estructura del Proyecto
 
