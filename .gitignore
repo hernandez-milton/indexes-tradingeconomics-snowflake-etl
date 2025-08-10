@@ -1,3 +1,6 @@
+# Ignorar todo por defecto
+*
+
 # Incluir carpetas y archivos específicos
 !AIRFLOW_DEPLOY/
 !AIRFLOW_DEPLOY/dags/
