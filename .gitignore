@@ -1,0 +1,16 @@
+# Incluir carpetas y archivos específicos
+!AIRFLOW_DEPLOY/
+!AIRFLOW_DEPLOY/dags/
+!AIRFLOW_DEPLOY/dags/trading_index/
+!AIRFLOW_DEPLOY/dags/trading_index/index_tradingeconomics.py
+!AIRFLOW_DEPLOY/dags/trading_index/queries/
+!AIRFLOW_DEPLOY/dags/trading_index/queries/upload_stage_tradingeconomics.sql
+!AIRFLOW_DEPLOY/dags/trading_index/queries/ingest_table_tradingeconomics.sql
+!AIRFLOW_DEPLOY/dags/utils_index.py
+
+!AIRFLOW_DEPLOY/local/
+!AIRFLOW_DEPLOY/local/trading/
+!AIRFLOW_DEPLOY/local/trading/indexes_tradingeconomics.csv
+
+!AIRFLOW_DEPLOY/tradingeconomics/
+!AIRFLOW_DEPLOY/tradingeconomics/tradingeconomics.ipynb
